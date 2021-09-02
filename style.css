@@ -180,6 +180,7 @@ option {
 }
 
 select {
+  background-color: transparent;
   color: var(--font-color);
   border: none;
   font-size: 18px;
