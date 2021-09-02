@@ -87,6 +87,7 @@ video {
 
 /* Progress Bar */
 .progress-range {
+  height: 8px;
   margin: auto;
   border-radius: 10px;
   position: absolute;
