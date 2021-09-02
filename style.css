@@ -188,6 +188,10 @@ select {
   border-radius: 5px;
 }
 
+select:focus {
+  outline: none;
+}
+
 select > option {
   background: rgba(0, 0, 0, 0.9);
   border: none;
