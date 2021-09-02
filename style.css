@@ -61,6 +61,7 @@ video {
   z-index: 5;
   display: flex;
   justify-content: space-between;
+  opacity: 0;
 }
 
 .control-group {
