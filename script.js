@@ -77,6 +77,15 @@ const setVolume = (e) => {
   }
   volumeBar.style.width = `${newVolume * 100}%`;
   videoEl.volume = newVolume;
+  // Change volume icon depending on volume
+  volumeIcon.className = "";
+  if (newVolume > 0.7) {
+    volumeIcon.classList.add("fas", "fa-volume-up");
+  } else if (newVolume < 0.7 && newVolume > 0) {
+    volumeIcon.classList.add("fas", "fa-volume-down");
+  } else if (newVolume === 0) {
+    volumeIcon.classList.add("fas", "fa-volume-off");
+  }
 };
 
 // Change Playback Speed -------------------- //
