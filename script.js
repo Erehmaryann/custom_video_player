@@ -12,6 +12,13 @@ const duration = document.querySelector(".time-duration");
 const fullScreenBtn = document.querySelector("#fullscreen");
 
 // Play & Pause ----------------------------------- //
+
+// Show play icon
+const showPlayIcon = () => {
+  playBtn.classList.replace("fa-pause", "fa-play");
+  playBtn.setAttribute("title", "Play");
+};
+
 const togglePlay = () => {
   // When the user clicks the play button
   if (videoEl.paused) {
@@ -20,8 +27,7 @@ const togglePlay = () => {
     playBtn.setAttribute("title", "Pause");
   } else {
     videoEl.pause();
-    playBtn.classList.replace("fa-pause", "fa-play");
-    playBtn.setAttribute("title", "Play");
+    showPlayIcon();
   }
 };
 
