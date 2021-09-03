@@ -28,3 +28,6 @@ const togglePlay = () => {
 // Change Playback Speed -------------------- //
 
 // Fullscreen ------------------------------- //
+
+// Event Listeners
+playBtn.addEventListener("click", togglePlay);
