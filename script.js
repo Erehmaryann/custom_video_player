@@ -31,3 +31,4 @@ const togglePlay = () => {
 
 // Event Listeners
 playBtn.addEventListener("click", togglePlay);
+videoEl.addEventListener("click", togglePlay);
