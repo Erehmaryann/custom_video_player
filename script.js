@@ -50,11 +50,18 @@ const updateProgress = () => {
     (videoEl.currentTime / videoEl.duration) * 100
   }%`;
   currentTime.textContent = `${displayTime(videoEl.currentTime)} /`;
-  duration.textContent = `${displayTime(videoEl.duration)}`;
+  duration.textContent = `${displayTime(
+    videoEl.duration - videoEl.currentTime
+  )}`;
 };
 
 // Click to seek within the video
-const setProgress = () => {};
+const setProgress = (e) => {
+  // value of the clicked area and total width of the progress container
+  const newTIme = e.offsetX / progressRange.offsetWidth;
+  progressBar.style.width = `${newTIme * 100}%`;
+  videoEl.currentTime = newTIme * videoEl.duration;
+};
 
 // Volume Controls --------------------------- //
 
