@@ -7,6 +7,7 @@ const playBtn = document.querySelector("#play-btn");
 const volumeIcon = document.querySelector("#volume-icon");
 const volumeRange = document.querySelector(".volume-range");
 const volumeBar = document.querySelector(".volume-bar");
+const currentTime = document.querySelector(".time-elapsed");
 
 // Play & Pause ----------------------------------- //
 
