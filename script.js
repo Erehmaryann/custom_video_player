@@ -5,6 +5,7 @@ const progressRange = document.querySelector(".progress-range");
 const progressBar = document.querySelector(".progress-bar");
 const playBtn = document.querySelector("#play-btn");
 const volumeIcon = document.querySelector("#volume-icon");
+const volumeRange = document.querySelector(".volume-range");
 
 // Play & Pause ----------------------------------- //
 
