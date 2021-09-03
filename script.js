@@ -31,6 +31,9 @@ const togglePlay = () => {
   }
 };
 
+// On Video End, show play button icon
+videoEl.addEventListener("ended", showPlayIcon);
+
 // Progress Bar ---------------------------------- //
 
 // Volume Controls --------------------------- //
