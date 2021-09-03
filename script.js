@@ -49,7 +49,7 @@ const updateProgress = () => {
   progressBar.style.width = `${
     (videoEl.currentTime / videoEl.duration) * 100
   }%`;
-  displayTime(64);
+  currentTime.textContent = `${displayTime(videoEl.currentTime)} /`;
 };
 
 // Volume Controls --------------------------- //
