@@ -17,6 +17,7 @@ const togglePlay = () => {
   if (videoEl.paused) {
     videoEl.play();
     playBtn.classList.replace("fa-play", "fa-pause");
+    playBtn.setAttribute("title", "Pause");
   } else {
     videoEl.pause();
     playBtn.classList.replace("fa-pause", "fa-play");
