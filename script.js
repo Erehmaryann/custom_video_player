@@ -64,3 +64,4 @@ playBtn.addEventListener("click", togglePlay);
 videoEl.addEventListener("click", togglePlay);
 videoEl.addEventListener("timeupdate", updateProgress);
 videoEl.addEventListener("canplay", updateProgress);
+progressRange.addEventListener("click", setProgress);
