@@ -36,6 +36,9 @@ videoEl.addEventListener("ended", showPlayIcon);
 
 // Progress Bar ---------------------------------- //
 
+// Update Progress bar as video plays
+const updateProgress = () => {};
+
 // Volume Controls --------------------------- //
 
 // Change Playback Speed -------------------- //
