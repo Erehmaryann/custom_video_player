@@ -68,6 +68,13 @@ const setProgress = (e) => {
 // Volume Bar
 const setVolume = (e) => {
   let newVolume = e.offsetX / volumeRange.offsetWidth;
+  // Rounding volume up or down
+  if (newVolume < 0.1) {
+    newVolume = 0;
+  }
+  if (newVolume > 0.9) {
+    newVolume = 1;
+  }
   volumeBar.style.width = `${newVolume * 100}%`;
   videoEl.volume = newVolume;
 };
