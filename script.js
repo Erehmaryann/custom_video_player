@@ -12,6 +12,14 @@ const duration = document.querySelector(".time-duration");
 const fullScreenBtn = document.querySelector("#fullscreen");
 
 // Play & Pause ----------------------------------- //
+const togglePlay = () => {
+  // When the user clicks the play button
+  if (videoEl.paused) {
+    videoEl.play();
+  } else {
+    videoEl.pause();
+  }
+};
 
 // Progress Bar ---------------------------------- //
 
