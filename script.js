@@ -53,6 +53,9 @@ const updateProgress = () => {
   duration.textContent = `${displayTime(videoEl.duration)}`;
 };
 
+// Click to seek within the video
+const setProgress = () => {};
+
 // Volume Controls --------------------------- //
 
 // Change Playback Speed -------------------- //
