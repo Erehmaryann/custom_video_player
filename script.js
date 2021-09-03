@@ -40,8 +40,8 @@ videoEl.addEventListener("ended", showPlayIcon);
 const displayTime = (time) => {
   const minutes = Math.floor(time / 60);
   let seconds = Math.floor(time % 60);
-  console.log(minutes);
-  console.log(seconds);
+  seconds = seconds > 9 ? seconds : `0${seconds}`;
+  return `${minutes}:${seconds}`;
 };
 
 // Update Progress bar as video plays
