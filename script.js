@@ -37,7 +37,11 @@ videoEl.addEventListener("ended", showPlayIcon);
 // Progress Bar ---------------------------------- //
 
 // Update Progress bar as video plays
-const updateProgress = () => {};
+const updateProgress = () => {
+  progressBar.style.width = `${
+    (videoEl.currentTime / videoEl.duration) * 100
+  }%`;
+};
 
 // Volume Controls --------------------------- //
 
