@@ -2,6 +2,7 @@
 // and store them in variables
 const videoEl = document.querySelector(".video");
 const progressRange = document.querySelector(".progress-range");
+const progressBar = document.querySelector(".progress-bar");
 
 // Play & Pause ----------------------------------- //
 
