@@ -50,6 +50,7 @@ const updateProgress = () => {
     (videoEl.currentTime / videoEl.duration) * 100
   }%`;
   currentTime.textContent = `${displayTime(videoEl.currentTime)} /`;
+  duration.textContent = `${displayTime(videoEl.duration)}`;
 };
 
 // Volume Controls --------------------------- //
