@@ -36,6 +36,9 @@ videoEl.addEventListener("ended", showPlayIcon);
 
 // Progress Bar ---------------------------------- //
 
+// Calculate display time format
+const displayTime = (time) => {};
+
 // Update Progress bar as video plays
 const updateProgress = () => {
   progressBar.style.width = `${
