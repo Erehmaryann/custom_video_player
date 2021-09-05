@@ -93,6 +93,8 @@ const setVolume = (e) => {
 
 // Mute/Unmute
 const toggleMute = () => {
+  // get rid of all the css classes from the volume icon
+  volumeIcon.className = "";
   // if there's a volume greater than 0
   if (videoEl.volume) {
     lastVolume = videoEl.volume;
