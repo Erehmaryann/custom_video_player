@@ -65,6 +65,8 @@ const setProgress = (e) => {
 
 // Volume Controls --------------------------- //
 
+let lastVolume = 1;
+
 // Volume Bar
 const setVolume = (e) => {
   let newVolume = e.offsetX / volumeRange.offsetWidth;
