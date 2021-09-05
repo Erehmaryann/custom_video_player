@@ -117,3 +117,4 @@ videoEl.addEventListener("timeupdate", updateProgress);
 videoEl.addEventListener("canplay", updateProgress);
 progressRange.addEventListener("click", setProgress);
 volumeRange.addEventListener("click", setVolume);
+volumeIcon.addEventListener("click", toggleMute);
