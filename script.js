@@ -96,6 +96,10 @@ const toggleMute = () => {
   if (videoEl.volume) {
     lastVolume = videoEl.volume;
     videoEl.volume = 0; //volume is now muted
+    volumeBar.style.width = 0;
+  } else {
+    videoEl.volume = lastVolume;
+    volumeBar.style.width = `${lastVolume * 100}%`;
   }
 };
 
