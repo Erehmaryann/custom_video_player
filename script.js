@@ -99,7 +99,7 @@ const toggleMute = () => {
     videoEl.volume = 0; //volume is now muted
     volumeBar.style.width = 0;
   }
-  // If there's no volume, set it to last volume
+  // If there's no volume( if it was muted), set it to last volume
   else {
     videoEl.volume = lastVolume;
     volumeBar.style.width = `${lastVolume * 100}%`;
