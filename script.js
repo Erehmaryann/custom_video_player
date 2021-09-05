@@ -88,6 +88,7 @@ const setVolume = (e) => {
   } else if (newVolume === 0) {
     volumeIcon.classList.add("fas", "fa-volume-off");
   }
+  lastVolume = newVolume;
 };
 
 // Change Playback Speed -------------------- //
