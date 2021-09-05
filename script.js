@@ -107,6 +107,8 @@ const toggleMute = () => {
   else {
     videoEl.volume = lastVolume;
     volumeBar.style.width = `${lastVolume * 100}%`;
+    volumeIcon.classList.add("fas", "fa-volume-up");
+    volumeIcon.setAttribute("title", "Mute");
   }
 };
 
