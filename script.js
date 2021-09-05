@@ -92,7 +92,12 @@ const setVolume = (e) => {
 };
 
 // Mute/Unmute
-const toggleMute = () => {};
+const toggleMute = () => {
+  if (videoEl.volume) {
+    lastVolume = videoEl.volume;
+    videoEl.volume = 0; //volume is now muted
+  }
+};
 
 // Change Playback Speed -------------------- //
 
