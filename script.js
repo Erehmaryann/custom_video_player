@@ -91,6 +91,9 @@ const setVolume = (e) => {
   lastVolume = newVolume;
 };
 
+// Mute/Unmute
+const toggleMute = () => {};
+
 // Change Playback Speed -------------------- //
 
 // Fullscreen ------------------------------- //
