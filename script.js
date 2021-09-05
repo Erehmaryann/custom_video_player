@@ -100,6 +100,8 @@ const toggleMute = () => {
     lastVolume = videoEl.volume;
     videoEl.volume = 0; //volume is now muted
     volumeBar.style.width = 0;
+    volumeIcon.classList.add("fas", "fa-volume-mute");
+    volumeIcon.setAttribute("title", "Unmute");
   }
   // If there's no volume( if it was muted), set it to last volume
   else {
