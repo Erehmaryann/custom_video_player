@@ -123,15 +123,15 @@ const setSpeed = () => {
 // Fullscreen ------------------------------- //
 
 /* View in fullscreen */
-function openFullscreen(elem) {
-  if (elem.requestFullscreen) {
-    elem.requestFullscreen();
-  } else if (elem.webkitRequestFullscreen) {
+function openFullscreen(element) {
+  if (element.requestFullscreen) {
+    element.requestFullscreen();
+  } else if (element.webkitRequestFullscreen) {
     /* Safari */
-    elem.webkitRequestFullscreen();
-  } else if (elem.msRequestFullscreen) {
+    element.webkitRequestFullscreen();
+  } else if (element.msRequestFullscreen) {
     /* IE11 */
-    elem.msRequestFullscreen();
+    element.msRequestFullscreen();
   }
   videoEl.classList.add("video-fullscreen");
 }
@@ -154,11 +154,7 @@ function closeFullscreen() {
 let fullscreen = false;
 
 const toggleFullscreen = () => {
-  if (!fullscreen) {
-    openFullscreen(player);
-  } else {
-    closeFullscreen();
-  }
+  !fullscreen ? openFullscreen(player) : closeFullscreen();
   fullscreen = !fullscreen;
 };
 
