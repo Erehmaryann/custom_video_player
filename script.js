@@ -1,5 +1,6 @@
 // Select all the needed HTML elements
 // and store them in variables
+const player = document.querySelector(".player");
 const videoEl = document.querySelector(".video");
 const progressRange = document.querySelector(".progress-range");
 const progressBar = document.querySelector(".progress-bar");
@@ -9,7 +10,7 @@ const volumeRange = document.querySelector(".volume-range");
 const volumeBar = document.querySelector(".volume-bar");
 const currentTime = document.querySelector(".time-elapsed");
 const duration = document.querySelector(".time-duration");
-const fullScreenBtn = document.querySelector("#fullscreen");
+const fullScreenBtn = document.querySelector(".fullscreen");
 const speedRate = document.querySelector(".player-speed");
 
 // Play & Pause ----------------------------------- //
@@ -121,6 +122,46 @@ const setSpeed = () => {
 
 // Fullscreen ------------------------------- //
 
+/* View in fullscreen */
+function openFullscreen(elem) {
+  if (elem.requestFullscreen) {
+    elem.requestFullscreen();
+  } else if (elem.webkitRequestFullscreen) {
+    /* Safari */
+    elem.webkitRequestFullscreen();
+  } else if (elem.msRequestFullscreen) {
+    /* IE11 */
+    elem.msRequestFullscreen();
+  }
+  videoEl.classList.add("video-fullscreen");
+}
+
+/* Close fullscreen */
+function closeFullscreen() {
+  if (document.exitFullscreen) {
+    document.exitFullscreen();
+  } else if (document.webkitExitFullscreen) {
+    /* Safari */
+    document.webkitExitFullscreen();
+  } else if (document.msExitFullscreen) {
+    /* IE11 */
+    document.msExitFullscreen();
+  }
+  videoEl.classList.remove("video-fullscreen");
+}
+
+// Toggle fullscreen
+let fullscreen = false;
+
+const toggleFullscreen = () => {
+  if (!fullscreen) {
+    openFullscreen(player);
+  } else {
+    closeFullscreen();
+  }
+  fullscreen = !fullscreen;
+};
+
 // Event Listeners
 playBtn.addEventListener("click", togglePlay);
 videoEl.addEventListener("click", togglePlay);
@@ -130,3 +171,4 @@ progressRange.addEventListener("click", setProgress);
 volumeRange.addEventListener("click", setVolume);
 volumeIcon.addEventListener("click", toggleMute);
 speedRate.addEventListener("change", setSpeed);
+fullScreenBtn.addEventListener("click", toggleFullscreen);
